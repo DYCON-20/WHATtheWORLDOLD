@@ -1,4 +1,6 @@
 ///////////////////////////////////////////////////////////////31/10/23 DYCON
+
+
 WHAT The WORLD - Explorez le Monde à travers la Culture
 
 Bienvenue sur WHAT The WORLD, votre portail interactif pour explorer la richesse culturelle de notre planète ! Notre site vous offre une expérience unique en vous permettant de découvrir le monde à travers la lentille de la culture, que ce soit à travers des livres, des films, des jeux vidéo, ou des lieux historiques.
@@ -43,5 +45,11 @@ Commentaires Techniques
 - Charte Graphique [/Charte graphique WHAT the WORLD]
 - Maquette du site [https://www.figma.com/file/3dngczwpTzJ9JfU2THGt8g/WHAT-the-WORLD?type=design&node-id=0%3A1&mode=design&t=HjkVhLIQrksl99kN-1]
 
+- Tache et autre [https://www.figma.com/file/JqkDtCZX9ixKRIQt0gNIir/WTW?type=whiteboard&node-id=0%3A1&t=jY7Pi1vjkHjyYVua-1]
+
+
 Explorez WHAT The WORLD et plongez dans un voyage culturel inoubliable !
 ///////////////////////////////////////////////////////////////31/10/23 DYCON
+
+
+
