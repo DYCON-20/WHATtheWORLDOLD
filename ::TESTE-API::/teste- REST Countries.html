@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Informations sur la France</title>
+  <style>
+    #country-info {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Informations sur la France</h1>
+  <div id="country-info"></div>
+
+  <script>
+    // Fonction pour récupérer les informations sur la France depuis l'API REST Countries
+    function fetchCountryInfo() {
+      const apiUrl = 'https://restcountries.com/v3.1/name/France';
+      fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+          const countryInfo = data[0]; // La France est le premier élément du tableau
+          const countryInfoDiv = document.getElementById('country-info');
+
+          for (const key in countryInfo) {
+            if (countryInfo.hasOwnProperty(key)) {
+              const infoItem = document.createElement('p');
+              infoItem.textContent = `${key}: ${countryInfo[key]}`;
+              countryInfoDiv.appendChild(infoItem);
+            }
+          }
+        })
+        .catch(error => {
+          console.error('Une erreur s\'est produite :', error);
+        });
+    }
+
+    // Appeler la fonction pour récupérer les informations sur la France
+    fetchCountryInfo();
+  </script>
+</body>
+</html>

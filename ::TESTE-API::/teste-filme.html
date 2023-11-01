@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recherche de films</title>
+</head>
+<body>
+    <h1>Recherche de films</h1>
+    <input type="text" id="movieTitle" placeholder="Entrez le titre du film">
+    <button onclick="searchMovie()">Rechercher</button>
+    <div id="movieInfo"></div>
+
+    <script>
+        function searchMovie() {
+            const apiKey = "391ac9aec50f2ca04f8011bfee7920fe"; // Remplacez par votre propre clé d'API TMDb
+            const movieTitle = document.getElementById("movieTitle").value;
+
+            // Requête à l'API TMDb
+            fetch(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieTitle}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.results && data.results.length > 0) {
+                        const movie = data.results[0];
+                        const movieInfo = document.getElementById("movieInfo");
+                        movieInfo.innerHTML = `
+                            <h2>${movie.title}</h2>
+                            <p>Date de sortie : ${movie.release_date}</p>
+                            <p>Vote moyen : ${movie.vote_average}</p>
+                            <p>${movie.overview}</p>
+                            <img src="https://image.tmdb.org/t/p/w500/${movie.poster_path}" alt="${movie.title} Poster">
+                        `;
+                    } else {
+                        document.getElementById("movieInfo").innerHTML = "Aucun résultat trouvé.";
+                    }
+                })
+                .catch(error => {
+                    console.error("Erreur : ", error);
+                });
+        }
+    </script>
+</body>
+</html>

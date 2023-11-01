@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Qualité de l'air en France</title>
+</head>
+<body>
+    <h1>Qualité de l'air en France</h1>
+    <p id="airQualityData">Chargement des données...</p>
+
+    <script>
+        // Remplacez 'YOUR_API_KEY' par votre clé d'API IQAir
+        const apiKey = '0f1d595e-0f0d-4216-a5d4-56956a31d38d';
+
+        // L'URL de l'API IQAir
+        const apiUrl = 'https://api.airvisual.com/v2/city';
+
+        // Ville en France (par exemple, Paris)
+        const city = 'Paris';
+
+        // Faites la requête à l'API IQAir
+        fetch(`${apiUrl}?city=${city}&state=Ile-de-France&country=France&key=${apiKey}`)
+            .then(response => response.json())
+            .then(data => {
+                const airQualityData = data.data.current;
+                const message = `La qualité de l'air à ${city}, France est ${airQualityData.pollution.aqius} (${airQualityData.pollution.mainus}).`;
+                document.getElementById('airQualityData').textContent = message;
+            })
+            .catch(error => {
+                console.error('Une erreur s\'est produite :', error);
+                document.getElementById('airQualityData').textContent = 'Erreur lors de la récupération des données.';
+            });
+    </script>
+</body>
+</html>

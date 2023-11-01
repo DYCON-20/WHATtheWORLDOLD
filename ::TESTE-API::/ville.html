@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villes et images</title>
+</head>
+<body>
+    <h1>Villes et images</h1>
+    <select id="city-select">
+        <option value="paris">Paris</option>
+        <option value="new-york">New York</option>
+        <!-- Ajoutez d'autres options pour différentes villes -->
+    </select>
+    <button onclick="showCityImage()">Afficher l'image</button>
+    <div id="city-image"></div>
+    
+    <script>
+        function showCityImage() {
+            const citySelect = document.getElementById('city-select');
+            const selectedCity = citySelect.value;
+            const cityImage = document.getElementById('city-image');
+            cityImage.innerHTML = ''; // Effacer l'image précédente
+
+            const unsplashAPIKey = 'SkJVGzLkogNFmjN6CQtvQRZtRtI93b-EuXSJSoWD2JY'; // Remplacez par votre clé API Unsplash
+            const cityQuery = encodeURIComponent(selectedCity);
+
+            fetch(`https://api.unsplash.com/photos/random?query=${cityQuery}`, {
+                headers: {
+                    'Authorization': `Client-ID ${unsplashAPIKey}`
+                }
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.urls && data.urls.regular) {
+                    const image = document.createElement('img');
+                    image.src = data.urls.regular;
+                    cityImage.appendChild(image);
+                } else {
+                    cityImage.innerHTML = 'Image non disponible';
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                cityImage.innerHTML = 'Erreur lors du chargement de l\'image';
+            });
+        }
+    </script>
+</body>
+</html>
