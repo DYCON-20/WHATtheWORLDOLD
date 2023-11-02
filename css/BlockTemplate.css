@@ -49,3 +49,53 @@
     height: 100%;
     background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 4.69%, rgba(26, 26, 26, 0.66) 41.15%, #1A1A1A 75%);
 }
+.bord {
+
+    transform: translateY(-7rem);
+    margin-left: 5rem;
+    margin-right:5rem ;
+}
+
+
+
+
+.NomCont{
+
+color: #FFF;
+font-family: TangoSans;
+font-size: 64px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 7.04px;
+
+}
+
+.svg-container {
+    width: 50%; /* Définissez la largeur désirée */
+    /* Ajoutez d'autres propriétés CSS si nécessaire */
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.custom-svg {
+    width: 100%; /* Ajustez la taille selon les besoins */
+    height: auto; /* Assurez-vous que la hauteur est automatiquement ajustée en fonction de la largeur */
+    /* Ajoutez d'autres propriétés CSS si nécessaire */
+}
+
+.my-button {
+    background-color: #0074d9; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Supprime les bordures du bouton */
+    padding: 10px 20px; /* Rembourrage interne du bouton */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur au survol */
+    border-radius: 4px; /* Coins arrondis */
+  }
+  
+  .my-button:hover {
+    background-color: #0056b3; /* Changement de couleur au survol */
+  }
+  
+  
