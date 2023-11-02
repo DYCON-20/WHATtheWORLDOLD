@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+
+<head>
+ <meta charset="UTF-8">
+ <!--//////////////////////////// DEBUT Tools  //////////////////////////-->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--//////////////////////////// FIN Tools  //////////////////////////-->
+
+<!--//////////////////////////// DEBUT BOOSTRAP  //////////////////////////-->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<script src="js/bootstrap.js" defer></script>
+<!--//////////////////////////// FIN BOOSTRAP  //////////////////////////-->
+
+<!--//////////////////////////// DEBUT CSS  //////////////////////////-->
+<link rel="stylesheet" type="text/css" href="css/basique.css">
+<link rel="stylesheet" type="text/css" href="css/font.css">
+<link rel="stylesheet" type="text/css" href="css/indexnav.css">
+<link rel="stylesheet" type="text/css" href="css/indexcar.css">
+<link rel="stylesheet" type="text/css" href="css/BlockTemplate.css">
+
+<!--//////////////////////////// FIN CSS  //////////////////////////-->
+
+<!--//////////////////////////// DEBUT JS  //////////////////////////-->
+<script src="js/carouselindex.js" defer></script>
+<!--//////////////////////////// FIN JS  //////////////////////////-->
+
+<!--//////////////////////////// DEBUT RESPON  //////////////////////////-->
+<!--//////////////////////////// FIN RESPON  //////////////////////////-->
+</head>
+
+
+<body class="Fontbody">
+
+
+    <header>
+        <!--//////////////////////////// DEBUT NAV  //////////////////////////-->
+        <?php include 'Block/navindex.html';?>
+        <!--//////////////////////////// DEBUT NAV  //////////////////////////-->
+    </header>
+
+
+    <main>
+        <!--//////////////////////////// DEBUT main  //////////////////////////-->
+        <?php include 'Block/carrousel.php';?>
+        <!--//////////////////////////// DEBUT main  //////////////////////////-->      
+    </main>
+
+    
+    <footer>
+        <!--//////////////////////////// DEBUT footer  //////////////////////////-->
+        <?php include 'Block/';?>
+        <!--//////////////////////////// DEBUT footer  //////////////////////////-->   
+    </footer>
+
+</body>
+</html>
