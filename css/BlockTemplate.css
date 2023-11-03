@@ -1,9 +1,10 @@
 .centered-block {
-    background-color: 181818;
     display: flex;
     justify-content: center; /* Centre horizontalement */
     align-items: center; /* Centre verticalement */
     height: 85vh; /* 100% de la hauteur de la fenêtre */
+    margin-left: 3rem;
+    margin-right: 3rem;
   }
   
 .blockcountry{
@@ -50,13 +51,19 @@
     background: linear-gradient(180deg, rgba(26, 26, 26, 0.00) 4.69%, rgba(26, 26, 26, 0.66) 41.15%, #1A1A1A 75%);
 }
 .bord {
-
     transform: translateY(-7rem);
+    position: absolute;
+
     margin-left: 5rem;
     margin-right:5rem ;
 }
 
 
+
+.top {
+
+    position: relative;
+}
 
 
 .NomCont{
@@ -75,7 +82,6 @@ letter-spacing: 7.04px;
     width: 50%; /* Définissez la largeur désirée */
     /* Ajoutez d'autres propriétés CSS si nécessaire */
     border-radius: 1rem;
-    margin-top: 1rem;
 }
 
 .custom-svg {
@@ -98,4 +104,80 @@ letter-spacing: 7.04px;
     background-color: #0056b3; /* Changement de couleur au survol */
   }
   
+  .litT{
+    
+    margin-top: 1rem;
+    color: #FFF;
+
+    font-family: TangoSans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.32px;
+}
+
+
+
+.POSTERT {
+    padding-top: 2rem;
+    border-radius: 10px 10px 10px 10px;
+    width: 80%; /* Ajustez la taille selon les besoins */
+    height: auto; /* Assurez-vous que la hauteur est automatiquement ajustée en fonction de la largeur */
+
+}
+
+.POSTERTC {
+    padding-top: 2rem;
+    border-radius: 10px 10px 10px 10px 10px;
+    width: 80%; /* Ajustez la taille selon les besoins */
+    height: auto; /* Assurez-vous que la hauteur est automatiquement ajustée en fonction de la largeur */
+margin-left: 2rem;
+margin-right: 2rem;
+}
+
+
+.Catergor{
+
+    color: #FFF;
+margin-top: 1rem;
+    font-family: TangoSans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.32px;
+
+}
+
+.Abody {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   
+}
+
+.carousel-control {
+    outline: none;
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2rem;
+    background-color: transparent; /* ou background-color: rgba(0, 0, 0, 0); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+
+}
+
+.carousel-control.left {
+    left: 0;
+}
+
+.carousel-control.right {
+    right: 0;
+}

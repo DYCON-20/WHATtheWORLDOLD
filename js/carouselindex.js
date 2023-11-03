@@ -1,20 +1,27 @@
-const slidesContainer = document.querySelector('.slides-container');
-let currentSlide = 1;
+const carousel = document.querySelector('.carousel');
+const prevButton = document.querySelector('.carousel-control.left');
+const nextButton = document.querySelector('.carousel-control.right');
+const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
+let currentTranslate = -itemWidth; // Set the initial position to the second item
 
-function showSlide(index) {
-    slidesContainer.style.transform = `translateX(-${index * 25}%)`;
-}
+// Set the initial position of the carousel
+carousel.style.transform = `translateX(${currentTranslate}px)`;
 
-function nextSlide() {
-    currentSlide = (currentSlide + 1) % 4;
-    showSlide(currentSlide);
-}
+prevButton.addEventListener('click', () => {
+    currentTranslate += itemWidth;
+    if (currentTranslate > 0) {
+        currentTranslate = 0;
+    }
+    carousel.style.transition = 'transform 0.3s ease';
+    carousel.style.transform = `translateX(${currentTranslate}px)`;
+});
 
-function prevSlide() {
-    currentSlide = (currentSlide - 1 + 4) % 4;
-    showSlide(currentSlide);
-}
-
-showSlide(currentSlide);
-
-setInterval(nextSlide, 5000); // Change slide every 5 seconds
+nextButton.addEventListener('click', () => {
+    currentTranslate -= itemWidth;
+    const maxTranslate = -itemWidth * (carousel.children.length - 1);
+    if (currentTranslate < maxTranslate) {
+        currentTranslate = maxTranslate;
+    }
+    carousel.style.transition = 'transform 0.3s ease';
+    carousel.style.transform = `translateX(${currentTranslate}px)`;
+});

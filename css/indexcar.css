@@ -1,0 +1,51 @@
+
+
+
+
+.carousel-container {
+    overflow: hidden;
+    border-radius: 25px 25px 0px 0px;
+
+}
+
+.carousel {
+    margin-left: 5rem;
+    display: flex;
+    cursor: grab;
+    transition: transform 0.3s ease;
+    border-radius: 25px 25px 0px 0px;
+
+}
+
+.carousel:active {
+    cursor: grabbing;
+    border-radius: 25px 25px 0px 0px;
+
+}
+
+
+.carousel-item {
+    border-radius: 25px 25px 0px 0px;
+
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    transition: opacity 0.3s ease; /* Animation de transition d'opacité */
+    border-radius: 25px 25px 0px 0px;
+
+    display: flex;
+  
+
+}
+
+
+.carousel-item.hidden {
+    opacity: 0; /* Fait disparaître les éléments cachés */
+    pointer-events: none; /* Désactive les interactions avec les éléments cachés */
+}
+
+
+
+.carousel-divider {
+    height: 1rem; /* Hauteur de l'espace entre les éléments */
+    /* Autres styles pour les diviseurs */
+}
